@@ -8,14 +8,22 @@
 
     <a-scene embedded arjs='patternRatio: 0.9'>
 
-        <a-asset-item id="animated-asset" src="Clock/scene.gltf"></a-asset-item>
+        <a-asset-item id="animated-asset" src="cosmic_cell/scene.gltf">
 
-        <a-marker preset='custom' type='pattern' url='pattern-Ar-Marker.patt'>
-            <a-entity gltf-model="#animated-asset" position="0 0 0" scale="0.5 0.5 0.5" animation-mixer></a-entity>
-        
+
+        </a-asset-item>
+
+        <a-marker preset='custom' type='pattern' url='pattern-qr-code.patt'>
+
+            <a-entity gltf-model="#animated-asset" animation-mixer rotation="-45,0,0" position="0 0 0"
+                scale="0.1 0.1 0.1"></a-entity>
+
 
         </a-marker>
-        <a-entity camera></a-entity>
+        <a-box shadow>
+            <a-plane rotation="-90 0 0" apply-shadowmaterial></a-plane>
+
+            <a-entity camera></a-entity>
     </a-scene>
 </body>
 
@@ -25,6 +33,6 @@
 
 
 
-    <!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
-            <!-- <a-box position="0 0.5 0"
+<!-- <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
+<!-- <a-box position="0 0.5 0"
                 animation="property: position; to: 1 8 -10; dur: 2000; easing: linear; loop: true"></a-box> -->
